@@ -1,0 +1,1528 @@
+@font-face
+  {
+  font-family: 'Glint';
+  src: url("../fonts/glint.woff") format("woff");
+  }
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+  font-family: 'Raleway';
+	font-size: 100%;
+	line-height: 150%;
+	font-size: 18px;
+  background: white;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+//Обнуление стилей
+
+$darkBlue: #02305A;
+$yellow: #FFB710;
+$lightGrey: #F4F4F4;
+
+%action-btn-outline {
+  position: relative;
+  width: 217px;
+  height: 69px;
+  margin-right: 42px;
+  font-family: inherit;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid $yellow;
+  transition: 0.3s ease-out;
+  a {
+    display: block;
+    padding: 20px;
+    color: $darkBlue;
+  }
+  &:hover {
+    border: 2px solid $yellow;
+    background: $yellow;
+  }
+}
+
+%join-btn-outline {
+  position: relative;
+  width: 122px;
+  height: 69px;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 2px solid $darkBlue;
+  transition: 0.3s ease-out;
+  a {
+    display: block;
+    padding: 20px;
+    color: $darkBlue;
+  }
+  &:hover {
+    border: 2px solid $darkBlue;
+    background: $darkBlue;
+  }
+}
+
+
+%action-btn {
+  position: relative;
+  width: 217px;
+  height: 69px;
+  margin-right: 42px;
+  font-family: inherit;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid $yellow;
+  border-radius: 20px;
+  background: $yellow;
+  transition: 0.3s ease-out;
+  @media only screen and (max-width: 600px) {
+    border-radius: 12px;
+    font-size: 14px;
+    width: 160px;
+    height: 42px;
+    margin-right: 25px;
+  }
+  a {
+    display: block;
+    padding: 20px;
+    color: $darkBlue;
+    @media only screen and (max-width: 600px) {
+      padding: 6px;
+    }
+  }
+  &:hover {
+    background: transparent;
+    a {
+      color: $yellow;
+    }
+  }
+}
+
+%join-btn {
+  position: relative;
+  width: 122px;
+  height: 69px;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 600;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: white;
+  transition: 0.3s ease-out;
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+    width: 84px;
+    height: 42px;
+    border-radius: 12px;
+  }
+  a {
+    display: block;
+    padding: 21px;
+    color: $darkBlue;
+    @media only screen and (max-width: 600px) {
+      padding: 6px;
+    }
+  }
+  &:hover {
+    background: $darkBlue;
+    border: 2px solid white;
+    a {
+      color: white;
+    }
+  }
+}
+
+h1 {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 3.5px;
+    width: 3px;
+    height: 60px;
+    background: $yellow;
+  }
+}
+
+h2 {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 3.5px;
+    width: 3px;
+    height: 35px;
+    background: $yellow;
+  }
+}
+
+h2,h3 {
+  color: $darkBlue;
+}
+
+p {
+  font-family: 'Raleway';
+  line-height: 150%;
+  @media only screen and (max-width: 600px) {
+    font-family: 'Raleway';
+    line-height: 150%;
+    font-size: 14px;
+  }
+}
+
+.p2 {
+  font-family: 'Raleway';
+  font-size: 14px;
+  line-height: 123%;
+  @media only screen and (max-width: 600px) {
+    font-family: 'Raleway';
+    line-height: 123%;
+    font-size: 12px;
+  }
+}
+
+h1 {
+  font-family:'Glint';
+  font-size: 55px;
+  line-height: 123%;
+  color: white;
+  text-transform: uppercase;
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+h2 {
+  font-family:'Glint';
+  font-size: 36px;
+  line-height: 123%;
+  text-transform: uppercase;
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-family:'Glint';
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+h4 {
+  font-family:'Raleway';
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 600;
+  @media only screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+  overflow: hidden;
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
+}
+
+header {
+  width: 1520px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  nav {
+    max-width: 603px;
+    width: 100%;
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+    ul {
+      margin: 0 30px 0 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    a {
+      color: black;
+    }
+    li {
+      display: block;
+      &:last-child {
+        padding-right: 0px;
+      }
+    }
+  }
+
+.burger-menu_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vmax;
+  height: 100vh;
+  z-index: 70;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+  .burger-menu_btn {
+    display: none;
+    padding: 15px 15px 6px 15px;
+    background: white;
+    border-radius: 10px;
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+      position: fixed;
+      top: 30px;
+      right: 45px;
+      z-index: 100;
+    }
+    @media only screen and (max-width: 600px) {
+      top: 30px;
+      right: 25px;
+    }
+    svg {
+      @media only screen and (max-width: 600px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .close {
+      display: none;
+    }
+    }
+    .burger-menu_nav {
+      display: flex;
+      position: fixed;
+      z-index: 90;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-top: 20px;
+      overflow-y: auto;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      padding-top: 20px;
+      background-color: white;
+      width: 35%;
+      transition: 0.3s ease;
+      .burger-menu_link {
+        margin: 10px 20px;
+        color: inherit;
+        &:hover {
+          color: $yellow;
+        }
+      }
+      @media only screen and (max-width: 448px) {
+       font-size: 16px;
+       width: 50%;
+      }
+
+      .burger-menu_auth {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        font-weight: 600;
+        color: $darkBlue;
+      }
+    }
+
+    .burger-menu_active {
+      .burger-menu_nav {
+        left: 0;
+      }
+      .burger-menu_overlay {
+        display: block;
+      }
+      .burger-menu_btn {
+        padding: 15px;
+        .default {
+          display: none;
+        }
+        .close {
+          display: block;
+        }
+      }
+    }
+    img {
+      position: relative;
+      width: 150px;
+      height: 60px;
+      @media only screen and (max-width: 600px) {
+       width: 65px;
+       height: 26px;
+      }
+  }
+  .btns {
+    @media only screen and (max-width: 768px) {
+     display: none;
+    }
+  }
+}
+
+.review-text {
+  p {
+    width: 400px;
+    padding-top: 200px;
+  }
+}
+
+.btns {
+  display: flex;
+}
+
+.action-btn-outline {
+ @extend %action-btn-outline;
+ @media only screen and (max-width: 375px) {
+   display: none;
+ }
+ &:hover {
+     a {
+       color: $darkBlue;
+     }
+   }
+}
+
+.join-btn-outline {
+  @extend %join-btn-outline;
+  @media only screen and (max-width: 375px) {
+    display: none;
+  }
+  &:hover {
+			a {
+				color: white;
+			}
+		}
+}
+
+.intro {
+  position: relative;
+  margin-top: 54px;
+  width: 1520px;
+  max-width: 100%;
+  background: $darkBlue;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+  @media only screen and (max-width: 1365px) {
+    margin-top: 700px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-top: 600px;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 100%;
+    border-radius: 24px;
+    margin-top: 500px;
+  }
+  @media only screen and (max-width: 448px) {
+    margin-top: 300px;
+  }
+
+
+  .callToAction {
+    width: 853px;
+    padding: 90px 0 90px 110px;
+    @media only screen and (max-width: 768px) {
+      padding: 120px 0 0 110px;
+    }
+    @media only screen and (max-width: 1024px) {
+      padding: 80px 0 80px 80px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 40px 0 40px 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 30px 25px;
+    }
+    @media only screen and (max-width: 320px) {
+      padding: 15px 6px;
+    }
+    h4 {
+      @media only screen and (max-width: 448px) {
+        font-weight: 400;
+      }
+    }
+  }
+  li {
+    display: inline;
+    list-style: none;
+    color: white;
+    padding: 20px;
+  }
+  .pluses {
+    display: flex;
+  }
+  ul {
+    margin: 40px 66px 0 0;
+    @media only screen and (max-width: 768px) {
+      margin: 20px 66px 0 0;
+    }
+    @media only screen and (max-width: 600px) {
+      margin: 0px 30px 0 0;
+    }
+  }
+  .action-btn {
+    @extend %action-btn;
+  }
+  .join-btn {
+    @extend %join-btn;
+  }
+  .btns {
+    margin-top: 60px;
+    @media only screen and (max-width: 768px) {
+      margin: 40px 0 80px 0;
+    }
+    @media only screen and (max-width: 600px) {
+      margin: 5px 0 0 0;
+    }
+  }
+}
+
+.illustrationHidden {
+  display: none;
+  max-width: 770px;
+  position: relative;
+  left: -270px;
+  top: -1030px;
+  z-index: 1;
+
+  @media only screen and (max-width: 1365px) {
+    display: block;
+  }
+  @media only screen and (max-width: 768px) {
+    top: -1050px;
+  }
+  @media only screen and (max-width: 1024px) {
+    top: -1020px;
+    left: -300px;
+  }
+  @media only screen and (max-width: 448px) {
+    top: -1020px;
+    left: -300px;
+  }
+
+  .circle {
+    position: absolute;
+    left: -10px;
+    top: -300px;
+    width: 660px;
+    height: 660px;
+    background: $yellow;
+    border-radius: 100%;
+    z-index: 2;
+    @media only screen and (max-width: 768px) {
+     width: 440px;
+     height: 440px;
+     left: 70px;
+     top: -230px;
+    }
+    @media only screen and (max-width: 600px) {
+      top: 300px;
+      left: 85px;
+    }
+    @media only screen and (max-width: 448px) {
+     width: 283px;
+     height: 283px;
+     top: 430px;
+     left: 155px;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: -300px;
+    left: -100px;
+    z-index: 2;
+    @media only screen and (max-width: 768px) {
+      top: -290px;
+      left: -73px;
+    }
+    @media only screen and (max-width: 600px) {
+      top: 300px;
+      left: -20px;
+      width: 674px;
+      height: 440px;
+    }
+    @media only screen and (max-width: 448px) {
+      width: 414px;
+      height: 270px;
+      top: 440px;
+      left: 100px;
+    }
+
+  }
+  .screens {
+    position: absolute;
+    top: -300px;
+    left: 0px;
+    @media only screen and (max-width: 768px) {
+      top: -350px;
+      left: 0px;
+    }
+    @media only screen and (max-width: 600px) {
+      top: 140px;
+      left: 25px;
+    }
+    @media only screen and (max-width: 448px) {
+      top: 285px;
+      left: 95px;
+    }
+    .screenshot1 {
+      position: relative;
+      z-index: 3;
+      @media only screen and (max-width: 768px) {
+       width: 261px;
+       height: 453px;
+       top: 160px;
+       left: 70px;
+      }
+      @media only screen and (max-width: 600px) {
+        top: 170px;
+        left: 70px;
+      }
+      @media only screen and (max-width: 448px) {
+       width: 167px;
+       height: 289px;
+       top: 160px;
+       left: 70px;
+      }
+    }
+    .screenshot2 {
+      position: absolute;
+      top: 20px;
+      left: 210px;
+      z-index: 2;
+      @media only screen and (max-width: 768px) {
+       width: 284px;
+       height: 433px;
+       top: 180px;
+       left: 210px;
+      }
+      @media only screen and (max-width: 448px) {
+       width: 178px;
+       height: 289px;
+       top: 160px;
+       left: 160px;
+      }
+    }
+  }
+  }
+
+.illustration {
+  max-width: 770px;
+  position: relative;
+  left: 105px;
+  top: -340px;
+  z-index: 1;
+
+  @media only screen and (max-width: 1365px) {
+    display: none;
+  }
+
+  .circle {
+    position: absolute;
+    left: -10px;
+    top: -300px;
+    width: 660px;
+    height: 660px;
+    background: $yellow;
+    border-radius: 100%;
+    z-index: 2;
+
+    @media only screen and (max-width: 1620px) {
+     width: 440px;
+     height: 440px;
+     left: 70px;
+     top: -200px;
+    }
+
+  }
+  svg {
+    position: absolute;
+    top: -300px;
+    left: -100px;
+    z-index: 2;
+    @media only screen and (max-width: 1620px) {
+     width: 665px;
+     height: 480px;
+     top: -220px;
+     left: -5px;
+    }
+  }
+  .screens {
+    position: absolute;
+    top: -300px;
+    left: 0px;
+    .screenshot1 {
+      position: relative;
+      z-index: 3;
+      @media only screen and (max-width: 1620px) {
+       width: 261px;
+       height: 453px;
+       top: 100px;
+       left: 70px;
+      }
+    }
+    .screenshot2 {
+      position: absolute;
+      top: 100px;
+      left: 210px;
+      z-index: 2;
+      @media only screen and (max-width: 1620px) {
+       width: 291px;
+       height: 453px;
+       top: 180px;
+       left: 210px;
+      }
+    }
+  }
+}
+
+.second-block {
+  width: 1520px;
+  max-width: 100%;
+  margin-top: 160px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 80px;
+  }
+  h2 {
+    max-width: 626px;
+    width: 100%;
+    margin-bottom: 53px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 1520px;
+    .groupCardsTop {
+      display: flex;
+      width: 100%;
+      .support {
+      margin-right: 40px;
+      }
+      @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+    }
+    .groupCardsBottom {
+      display: flex;
+      width: 100%;
+      .comfort {
+      margin-right: 40px;
+      }
+      @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+    }
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 285px;
+      padding: 50px;
+      margin-bottom: 40px;
+      background: white;
+      box-shadow: (0px 0px 29px rgba(2, 48, 90, 0.12));
+      border-radius: 35px;
+
+      @media only screen and (max-width: 600px) {
+        border-radius: 15px;
+        padding: 30px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+      p {
+        max-width: 372px;
+        width: 100%;
+        opacity: 0.5;
+      }
+      svg {
+        @media only screen and (max-width: 600px) {
+          height: 110px;
+        }
+      }
+    }
+  }
+}
+
+.services {
+  max-width: 1520px;
+  width: 100%;
+  margin-top: 160px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 80px;
+  }
+  h4 {
+    margin-bottom: 10px;
+    width: 280px;
+  }
+  h2 {
+    max-width: 826px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 80px;
+  }
+  .service {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 0 0 25px;
+    @media only screen and (max-width: 1020px) {
+      display: block;
+    }
+    .text {
+      max-width: 280px;
+      width: 100%
+    }
+    h4 {
+      display: inline;
+    }
+    p {
+      margin-top: 10px;
+      opacity: 0.5;
+    }
+  }
+  img {
+    margin-right: 20px;
+    @media only screen and (max-width: 600px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 1fr 1fr;
+    @media only screen and (max-width: 1366px) {
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    @media only screen and (max-width: 1020px) {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+  }
+  .rko, .corpCards, .acquiring, .online-cash, .credit, .bank, {
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  .InternetAcquiring, .factoring {
+    border-bottom: 1px solid #E6E6E6;
+    @media only screen and (max-width: 1366px) {
+      border-right: 1px solid #E6E6E6;
+    }
+  }
+  .salary, .software, .leasing, {
+    border-right: 1px solid #E6E6E6;
+  }
+  .acquiring, .credit, .salary {
+    @media only screen and (max-width: 1366px) {
+      border-right: 0px solid #E6E6E6;
+      border-bottom: 1px solid #E6E6E6;
+    }
+  }
+  .acquiring, .salary {
+    @media only screen and (max-width: 1020px) {
+      border-right: 1px solid #E6E6E6;
+    }
+  }
+  .corpCards, .InternetAcquiring, .factoring, .software {
+    @media only screen and (max-width: 1020px) {
+      border-right: 0px solid #E6E6E6;
+      border-bottom: 1px solid #E6E6E6;
+    }
+  }
+}
+
+.partners {
+  max-width: 1520px;
+  width: 100%;
+  margin-top: 160px;
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin-top: 20px;
+    max-width: 470px;
+    @media only screen and (max-width: 900px) {
+      max-width: 270px;
+    }
+  }
+  .text {
+    min-width: 542px;
+    @media only screen and (max-width: 1024px) {
+      padding: 0 0 40px 0;
+    }
+  }
+  .banksLogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 40px;
+    width: 100%;
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      grid-gap: 20px;
+    }
+  }
+  .bank {
+    width: 90px;
+    height: 90px;
+    background: $lightGrey;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 1024px) {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+      width: 50px;
+      height: 50px;
+    }
+    &:hover {
+      transform: translate(0, -12px);
+      transition: 0.2s ease-in;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    display: block;
+    margin-top: 80px;
+  }
+}
+
+.forWhom {
+  max-width: 1520px;
+  width: 100%;
+  margin-top: 160px;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 1020px) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-top: 80px;
+  }
+  h2 {
+    display: inline;
+    width: 420px;
+    margin-right: 57px;
+  }
+  .tags {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1051px;
+    width: 100%;
+    @media only screen and (max-width: 1020px) {
+      margin-top: 25px;
+    }
+    .tag {
+      padding: 5px 30px 0 30px;
+      margin-bottom: 18px;
+      width: auto;
+      height: 35px;
+      text-align: center;
+      border-radius: 20px;
+      background: $lightGrey;
+      @media only screen and (max-width: 600px) {
+        padding: 5px 30px 0 20px;
+        height: 25px;
+      }
+      @media only screen and (max-width: 320px) {
+        padding: 5px 17px 0 17px;
+        height: 25px;
+      }
+    }
+    .accountant, .law, .ecom, .tender{
+      margin-right: 18px;
+    }
+  }
+}
+
+.outro {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1520px;
+  width: 100%;
+  min-height: 435px;
+  height: 100%;
+  margin: 160px 0 160px 0;
+  @media only screen and (max-width: 600px) {
+    margin: 80px 0 80px 0;
+  }
+  padding: 111px 120px 111px 120px;
+  background: white;
+  box-shadow: (0px 0px 29px rgba(2, 48, 90, 0.12));
+  border-radius: 75px;
+  @media only screen and (max-width: 1366px) {
+    padding: 90px 90px 0 90px;
+  }
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 90px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 30px;
+    border-radius: 20px;
+    justify-content: space-around;
+  }
+
+  h2 {
+    max-width: 610px;
+  }
+  .text {
+    margin-right: 30px;
+    max-width: 610px;
+    @media only screen and (max-width: 768px) {
+     margin-bottom: 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 10px;
+    }
+  }
+  .action-btn {
+    margin-top: 50px;
+    @extend %action-btn;
+    @media only screen and (max-width: 600px) {
+      margin-top: 20px;
+    }
+}
+    svg {
+      @media only screen and (max-width: 768px) {
+        width: 434px;
+        height: 300px;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 265px;
+        height: 182px;
+      }
+      @media only screen and (max-width: 320px) {
+        width: 224px;
+        height: 155px;
+      }
+    }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 270px;
+  padding: 90px 50px 90px 50px;
+  background: $darkBlue;
+  @media only screen and (max-width: 768px) {
+    padding: 90px 50px 90px 50px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 30px 20px;
+   height: 94px;
+  }
+  img {
+    @media only screen and (max-width: 600px) {
+      width: 85px;
+      height: 34px;
+    }
+  }
+  nav {
+    max-width: 600px;
+    width: 100%;
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+  ul {
+    margin: 0 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    list-style: none;
+    display: inline;
+    font-size: 14px;
+    color: white;
+    a {
+      font-size: 14px;
+      color: white;
+  }
+  }
+  .contacts {
+    a {
+      color: white;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      display: flex;
+      img {
+        margin-right: 3px;
+        @media only screen and (max-width: 600px) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    .phone {
+      margin-bottom: 25px;
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .footercover {
+    max-width: 1520px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1,h2 {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 2px;
+      width: 2px;
+      height: 20px;
+      background: $yellow;
+    }
+  }
+}
+
+
+//Анимация иллюстраций
+
+//Иллюстрация в первом блоке
+.illustration {
+  path:first-child {
+    stroke-dasharray: 1578.3;
+    stroke-dashoffset: 1578.3;
+    animation: lineAnim 2s ease forwards;
+  }
+  .screens {
+    opacity: 0;
+    animation: screensAnim 1s ease 1s forwards;
+    z-index: 2;
+    .screenshot1 {
+     transform: rotate(7deg);
+     animation: screenshotsAnim 1s ease 2s forwards;
+    }
+    .screenshot2 {
+      transform: rotate(-12deg);
+      animation: screenshotsAnim 1s ease 2s forwards;
+    }
+  }
+  circle {
+    transform: translate(-10px, -10px);
+    animation: circlePosAnim 1s ease forwards 2s;
+  }
+  .adaptiveCircle {
+    transform: translate(-10px, -10px);
+    offset-distance: 0%;
+    offset-path: path('M738 1C709.5 45.5 618 136.4 566 72.0001C501 -8.49993 685 -31.9999 644 142.5C603 317 419 221.5 309.5 266.5C258.333 297.333 191.638 273.473 163.5 473C147 590 -9.29051 593 26 461C67.6 305.4 26.6667 304.5 1 323.5');
+    animation: circleTrackAnim 2s ease forwards, circlePosAnim2 1s ease forwards 2s;
+  }
+}
+
+.illustrationHidden {
+  path:first-child {
+    stroke-dasharray: 1578.3;
+    stroke-dashoffset: 1578.3;
+    animation: lineAnim 2s ease forwards;
+  }
+  .screens {
+    opacity: 0;
+    animation: screensAnim 1s ease 1s forwards;
+    z-index: 2;
+    .screenshot1 {
+     transform: rotate(7deg);
+     animation: screenshotsAnim 1s ease 2s forwards;
+    }
+    .screenshot2 {
+      transform: rotate(-12deg);
+      animation: screenshotsAnim 1s ease 2s forwards;
+    }
+  }
+  circle {
+    transform: translate(-10px, -10px);
+    animation: circlePosAnim 1s ease forwards 2s;
+  }
+}
+
+
+//Иллюстрации в карточках преимуществ (второй блок)
+
+
+
+.support, .transparency, .comfort, .highStakes,{
+  svg{
+   opacity:0 ;
+  }
+  img {
+    display: none;
+    @media only screen and (max-width: 600px) {
+      width: 90px;
+      height: 90px;
+  }
+}
+}
+.support-show {
+  svg{
+   opacity:1 ;
+  }
+  path {
+    stroke-dasharray: 326.3;
+    stroke-dashoffset: 326.3;
+    animation: lineAnim 1s ease forwards;
+  }
+  circle:last-child {
+    offset-distance: 0%;
+    offset-path: path('M1 192.5L271.5 10');
+    animation: circleTrackAnim 1s ease forwards;
+  }
+  circle:first-child {
+    r: 0;
+    offset-distance: 0%;
+    offset-path: path('M1 108.485L160 1');
+    animation: circleTrackAnim 1s ease forwards 0.2s, supportCircle 1s ease forwards 0.2s;
+  }
+  rect {
+    offset-path: path('M1 30.4854L45 1');
+    offset-distance: 0%;
+    animation: circleTrackAnim 1s ease forwards 0.2s, supportRect 1s ease forwards 0.2s;
+  }
+}
+
+.transparency-show {
+  svg{
+   opacity:1 ;
+  }
+  path {
+    stroke-dasharray: 380.58;
+    stroke-dashoffset: -380.58;
+    animation: lineAnim 1s ease forwards;
+  }
+  circle {
+    offset-distance: 100%;
+    offset-path: path('M58.217 83.2461C62.717 83.0795 71.3171 83.2461 69.7171 85.2461C67.7171 87.7461 50.2171 98.7461 65.2171 97.2461C80.2171 95.7461 94.7171 88.7461 84.7171 99.7461C74.7171 110.746 40.2171 135.246 65.2171 137.746C90.2171 140.246 148.717 86.2461 177.717 91.7461C206.717 97.2461 161.717 189.746 177.717 192.746C192.717 194.746 185.55 195.079 185.217 192.746');
+    animation: circleTrackAnimReverse 1s ease forwards;
+  }
+  rect {
+    animation: transparencyRect 1s ease forwards;
+  }
+}
+
+.comfort-show {
+  svg{
+   opacity:1 ;
+  }
+  path {
+    stroke-dasharray: 278.791;
+    stroke-dashoffset: 278.791;
+    animation: lineAnim 1s ease forwards;
+  }
+  .cir {
+    offset-distance: 0%;
+    offset-path: path('M0 182.092C17.7615 178.503 62.0042 165.018 77.5045 129.884C93.6513 93.2844 102.263 88.4407 125.945 93.2844C153.324 98.8843 170.618 114.276 235.205 83.5967');
+    animation: circleTrackAnim 1s ease forwards;
+  }
+  circle:last-child {
+    transform: translate(0, -100px);
+    animation: comfortCircle 1s ease forwards;
+  }
+}
+
+.highStakes-show {
+  svg{
+   opacity:1 ;
+  }
+  path {
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    animation: lineAnim 1s ease forwards;
+  }
+  circle {
+    offset-distance: 0%;
+    offset-path: path('M1 171C59.6667 171.667 180 142 192 18');
+    animation: circleTrackAnim 1s ease forwards;
+  }
+  rect {
+  transform: rotate(-180deg);
+   animation: highStakesRect 1s ease forwards;
+  }
+}
+
+.support-show:hover {
+  cursor: pointer;
+
+  path {
+    stroke-dasharray: 326.3;
+    stroke-dashoffset: 326.3;
+    animation: lineAnim 1s ease infinite alternate;
+  }
+  circle:last-child {
+    offset-distance: 0%;
+    offset-path: path('M1 192.5L271.5 10');
+    animation: circleTrackAnim 1s ease infinite alternate;
+  }
+  circle:first-child {
+    offset-distance: 0%;
+    r: 0;
+    offset-path: path('M1 108.485L160 1');
+    animation: circleTrackAnim 1s ease infinite alternate, supportCircle 1s ease infinite alternate;
+  }
+  rect {
+    offset-distance: 0%;
+    offset-path: path('M1 30.4854L45 1');
+    animation: circleTrackAnim 1s ease infinite alternate 0.2s, supportRect 1s ease infinite alternate 0.2s;
+  }
+}
+
+.transparency-show:hover {
+  cursor: pointer;
+
+  path {
+    stroke-dasharray: 380.58;
+    stroke-dashoffset: -380.58;
+    animation: lineAnim 1s ease infinite alternate;
+  }
+  circle {
+    offset-distance: 100%;
+    offset-path: path('M58.217 83.2461C62.717 83.0795 71.3171 83.2461 69.7171 85.2461C67.7171 87.7461 50.2171 98.7461 65.2171 97.2461C80.2171 95.7461 94.7171 88.7461 84.7171 99.7461C74.7171 110.746 40.2171 135.246 65.2171 137.746C90.2171 140.246 148.717 86.2461 177.717 91.7461C206.717 97.2461 161.717 189.746 177.717 192.746C192.717 194.746 185.55 195.079 185.217 192.746');
+    animation: circleTrackAnimReverse 1s ease infinite alternate;
+  }
+  rect {
+    animation: transparencyRect 1s ease infinite alternate;
+  }
+}
+
+.comfort-show:hover {
+cursor: pointer;
+
+  path {
+    stroke-dasharray: 278.791;
+    stroke-dashoffset: 278.791;
+    animation: lineAnim 1s ease infinite alternate;
+  }
+  .cir {
+    offset-distance: 0%;
+    offset-path: path('M0 182.092C17.7615 178.503 62.0042 165.018 77.5045 129.884C93.6513 93.2844 102.263 88.4407 125.945 93.2844C153.324 98.8843 170.618 114.276 235.205 83.5967');
+    animation: circleTrackAnim 1s ease infinite alternate;
+  }
+  circle:last-child {
+    transform: translate(0, -100px);
+    animation: comfortCircle 1s ease infinite alternate;
+  }
+}
+
+.highStakes-show:hover {
+cursor: pointer;
+
+  path {
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    animation: lineAnim 1s ease infinite alternate;
+  }
+  circle {
+    offset-distance: 0%;
+    offset-path: path('M1 171C59.6667 171.667 180 142 192 18');
+    animation: circleTrackAnim 1s ease infinite alternate;
+  }
+  rect {
+  transform: rotate(-180deg);
+   animation: highStakesRect 1s ease infinite alternate;
+  }
+}
+
+//Иллюстрация перед футтером
+
+.outro {
+ path {
+   display: none;
+ }
+ .graphicCircle {
+   display: none;
+ }
+ img {
+   display: none;
+ }
+}
+
+.outro-show {
+  .graphicPath {
+    display: block;
+    stroke-dasharray: 1194.7;
+    stroke-dashoffset: 1194.7;
+    animation: lineAnim 2s ease forwards;
+  }
+  .graphicCircle {
+    offset-distance: 0%;
+    display: block;
+    offset-path: path('M1 408.576C19.0181 413.487 39.2161 410.35 55.0542 375.79C76.5624 328.858 52.1191 206.494 103.232 207.231C154.344 207.967 117.934 283.329 167.943 290.328C217.952 297.327 194.786 239.861 220.526 235.44C246.266 231.02 223.24 104.383 273.752 100.958C321.433 97.7258 316.868 270.067 383.792 266.384C450.716 262.7 412.841 191.235 449.981 184.973C487.12 178.711 440.052 72.9875 490.429 66.7252C540.806 60.4628 578.313 78.5131 581.255 26.2041');
+    animation: circleTrackAnim 2s ease forwards;
+  }
+  path:last-child {
+    display: block;
+    opacity: 0;
+    animation: outroStar 1s ease forwards;
+  }
+}
+
+@keyframes outroStar {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes secondIllustrationCircle {
+  100% {
+  transform: translate(2px, -25px);
+  }
+}
+
+@keyframes highStakesRect{
+  100% {
+  height: 171px;
+  }
+}
+
+@keyframes comfortCircle {
+  100% {
+  transform: translate(0, 0);
+  r: 49.2475px;
+  }
+}
+
+
+@keyframes transparencyRect {
+  0% {
+  x: 210.34597px;
+  y: 180.9152px;
+  }
+  100% {
+  x: 1.34597px;
+  y: 76.9152px;
+  }
+}
+
+@keyframes supportCircle {
+  0% {
+    r: 0px;
+  }
+  100% {
+    r: 64px;
+  }
+}
+
+@keyframes supportRect {
+  0% {
+    width: 0px;
+    height: 0px;
+    x: -105px;
+    y: 113px;
+  }
+  100% {
+    width: 42.0584px;
+    height: 42.0584px;
+    x: -105px;
+    y: 113px;
+  }
+}
+
+@keyframes screensAnim {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes screenshotsAnim {
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes lineAnim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circleTrackAnim {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+@keyframes circleTrackAnimReverse {
+  0% {
+    offset-distance: 100%;
+  }
+  100% {
+    offset-distance: 0%;
+  }
+}
+
+@keyframes circlePosAnim{
+  100% {
+   transform: translate(15px, -20px);
+  }
+}
+
+@keyframes circlePosAnim2{
+  100% {
+   transform: translate(-33px, -25px);
+  }
+}
